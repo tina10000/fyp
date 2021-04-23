@@ -14,21 +14,9 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function showLogin()
-    {
-        return view('login');
-    }
-
-    public function showRegister()
-    {
-        $types = UserType::all();
-       // $types = UserType::where('id','!=',1)->get();
-        return view('register',compact('types'));
-    }
-
     public function dashboard()
     {
-//dd(Auth::user());
+
         $view = 'admin.dashboard';
 //        if(Auth::user()->user_type == 1){
 //            $view = 'admin.dashboard';

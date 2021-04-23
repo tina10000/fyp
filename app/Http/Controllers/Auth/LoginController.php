@@ -3,11 +3,25 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\UserType;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
+
+    public function showLogin()
+    {
+        return view('login');
+    }
+
+    public function showRegister()
+    {
+        $types = UserType::all();
+        // $types = UserType::where('id','!=',1)->get();
+        return view('register',compact('types'));
+    }
+
     public function redirectToProvider()
     {
         return Socialite::driver('google')->redirect();

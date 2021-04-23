@@ -24,15 +24,15 @@ use App\Models\Data;
 //    return view('welcome');
 //});
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/login', [HomeController::class, 'showLogin']);
+Route::get('/login', [LoginController::class, 'showLogin']);
 Route::get('/logout', [HomeController::class, 'logout']);
-Route::get('/register', [HomeController::class, 'showRegister']);
+Route::get('/register', [LoginController::class, 'showRegister']);
 Route::post('/register', [RegisterController::class, 'storeRegister']);
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
-Route::get('/redirect', [LoginController::class, 'redirectToProvider']);
-Route::get('/callback', [LoginController::class, 'handleProviderCallback']);
+//Route::get('/redirect', [LoginController::class, 'redirectToProvider']);
+//Route::get('/callback', [LoginController::class, 'handleProviderCallback']);
 
 //staffDirectory
 Route::get('/staffdirectory', [HomeController::class, 'getstaff']);
