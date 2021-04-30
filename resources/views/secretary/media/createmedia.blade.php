@@ -33,7 +33,6 @@
                                                 <textarea id="post" rows="2" placeholder="Share some what you are thinking?" name="post"></textarea>
                                                 <br><br><br><br>
                                                 <div class="attachments">
-                                                    <ul>
 
 
 
@@ -49,7 +48,7 @@
                                                             </div>
 
 
-                                                    </ul>
+
                                                 </div>
                                                 <button class="post-btn" type="submit" data-ripple="">Post</button>
                                             </form>
@@ -102,7 +101,7 @@
                                                                     <div class="description">
                                                                         <p>{{ $item->post}}</p>
                                                                         <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                                                                            <img class="card-img-top img-fluid" src="{{asset('storage/' . $item->image_path)}}" alt="">
+                                                                            <img class="card-img-top img-fluid" src="{{asset('storage' . $item->image_path)}}" alt="">
                                                                             <a>
                                                                                 <div class="mask rgba-white-slight"></div>
                                                                             </a>
@@ -154,5 +153,6 @@
             </div>
         </div>
     </div>
+
     <!-- /page content -->
 @endsection

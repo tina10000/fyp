@@ -67,7 +67,7 @@ class PollController extends Controller
                 ->where('poll_answers.user_id', Auth::id());
         })->get();
         //dd($polls);
-        $answers = PollAnswer::pluck('user_id', 'poll_id')->toArray();
+        $answers = PollAnswer::where('user_id',auth()->user()->id)->pluck('user_id', 'poll_id')->toArray();
 
         return view('secretary.poll.polls' , compact('polls' , 'answers'));
     }
@@ -96,10 +96,17 @@ class PollController extends Controller
     {
         $poll->answers()->delete();
         $poll->options()->delete();
-
         $poll->delete();
-
         return redirect('polls')->with('message','Poll deleted');
+    }
+
+    public function viewResult()
+    {
+
+        $polls = Poll::all();
+
+        //dd($polls);
+        return view('secretary.poll.result' , compact('polls'));
     }
 
 }

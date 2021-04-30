@@ -45,6 +45,7 @@ class HomeController extends Controller
 
     public function getstaff () {
         $users = User::orderBy('id')->where('status', ['active'])->get();
+
         return view('staffdirectory', compact('users'));
     }
 

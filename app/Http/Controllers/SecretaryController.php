@@ -111,9 +111,9 @@ class SecretaryController extends Controller
     public function deleteEvent($id)
     {
         Event::destroy($id);
-
         //Event::flash('message', 'Delete successfully!');
         //Event::flash('alert-class', 'alert-success');
+
         return redirect('events')->with('message', 'Event deleted successfully');
     }
 

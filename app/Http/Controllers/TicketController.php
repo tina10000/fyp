@@ -155,7 +155,10 @@ class TicketController extends Controller
      */
     public function destroy(Ticket $ticket)
     {
+
+        $ticket->bookings()->delete();
         $ticket->delete();
+
 
 
         return redirect('tickets')->with('message','Ticket deleted');

@@ -67,7 +67,7 @@
                     <li>
                         <a><i class="fa fa-clone"></i>Meeting <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                                <li><a href="{{ url('staff/requestMeeting') }}">Request Meeting</a></li>
+                                <li><a href="{{ url('staff/requestMeeting') }}">Schedule Meeting</a></li>
                             <li><a href="{{ url('viewMeeting') }}">Meeting Requests</a></li>
 
                         </ul>
@@ -79,7 +79,7 @@
                         <a><i class="fa fa-camera-retro fa-3x"></i>Media <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                                 <li><a href="{{ url('media') }}">Event Pictures</a></li>
-                                  <li><a href="{{ url('trial') }}">Pictures</a></li>
+                                  <li><a href="{{ url('pictures') }}">Pictures</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -119,7 +119,8 @@
 
                             @if(Auth::user()->user_type == 3)
                                 <li><a href="{{ url('create-poll') }}">Create Poll</a></li>
-
+                                <li><a href="{{ url('poll') }}">View Polls</a></li>
+                                <li><a href="{{ url('poll-result') }}">Poll Result</a></li>
                             @endif
                             <li><a href="{{ url('polls') }}">Poll</a></li>
                         </ul>

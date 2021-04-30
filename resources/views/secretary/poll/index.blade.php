@@ -44,9 +44,6 @@
                                 </td>
 
                                 <td>
-
-                                    <a href="{{ url('poll/result/'. $poll->id) }}" class="btn btn-warning">View Result</a>
-
                                     <a href="{{ url('poll/'.  $poll->id.'/delete') }}" class="btn btn-danger">Delete</a>
                                 </td>
                                 @endforeach

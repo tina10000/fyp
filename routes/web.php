@@ -128,7 +128,7 @@ Route::post('/create-poll', [\App\Http\Controllers\PollController::class, 'store
 Route::get('/polls', [\App\Http\Controllers\PollController::class, 'polls']);
 Route::post('/polls', [\App\Http\Controllers\PollController::class, 'savePolls']);
 
-Route::get('//poll/{id}/result', [\App\Http\Controllers\PollController::class, 'viewResult']);
+Route::get('/poll-result', [\App\Http\Controllers\PollController::class, 'viewResult']);
 Route::get('/poll/{poll}/delete', [\App\Http\Controllers\PollController::class, 'destroy']);
 
 //Tournament
@@ -137,3 +137,9 @@ Route::get('/create-tournament', [\App\Http\Controllers\TournamentController::cl
 Route::get('/message', [\App\Http\Controllers\MessageController::class, 'index']);
 Route::get('/message/{id}', [\App\Http\Controllers\MessageController::class, 'userMessage']);
 Route::post('/message/{id}', [\App\Http\Controllers\MessageController::class, 'saveMessage']);
+
+//Pictures
+Route::get('/pictures', [\App\Http\Controllers\PictureController::class, 'index']);
+Route::post('/pictures/store', [\App\Http\Controllers\PictureController::class, 'store']);
+Route::get('/pictures/fetch', [\App\Http\Controllers\PictureController::class, 'fetch']);
+Route::get('/pictures/destroy', [\App\Http\Controllers\PictureController::class, 'destroy']);

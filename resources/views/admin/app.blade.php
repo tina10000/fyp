@@ -32,7 +32,15 @@
     <link rel="stylesheet" href="{{asset('css/frontend/css\weather-icons.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/css\toast-notification.css')}}">
     <link rel="stylesheet" href="{{asset('css/frontend/css\style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/frontend/css\color.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('css/frontend/css\color.css')}}">--}}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" />
+
+
+
 
     @yield('css')
 
@@ -117,6 +125,16 @@
 <script src="{{ asset('resource/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('resource/js/responsive.bootstrap.js') }}"></script>
 <script src="{{ asset('resource/js/dataTables.scroller.min.js') }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.js"></script>
+
+
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 @stack('script')
 </body>
